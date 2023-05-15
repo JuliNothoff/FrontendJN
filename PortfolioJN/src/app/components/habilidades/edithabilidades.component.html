@@ -1,0 +1,83 @@
+<div class="container" *ngIf="hys">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="html">HTML: </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="html"
+              name="html"
+              [(ngModel)]="hys.html"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="bootstrap">Bootstrap: </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="bootstrap"
+              name="bootstrap"
+              [(ngModel)]="hys.bootstrap"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="angular">Angular: </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="angular"
+              name="angular"
+              [(ngModel)]="hys.angular"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="mysql">MySQL: </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="mysql"
+              name="mysql"
+              [(ngModel)]="hys.mysql"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="java">Java: </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="java"
+              name="java"
+              [(ngModel)]="hys.java"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="springboot"
+              >Springboot
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese un numero del 1 al 100"
+              id="springboot"
+              name="springboot"
+              [(ngModel)]="hys.springboot"
+              required
+            />
+          </div>
+          <button class="btn btn-light">Editar Hard & Soft Skills</button>        
+        </form>
+      </div>
+    </div>
+  </div>

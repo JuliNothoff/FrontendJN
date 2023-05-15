@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Hys {\n  constructor(html, bootstrap, angular, mysql, java, springboot) {\n    this.html = html;\n    this.bootstrap = bootstrap;\n    this.angular = angular;\n    this.mysql = mysql;\n    this.java = java;\n    this.springboot = springboot;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

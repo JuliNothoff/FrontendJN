@@ -1,0 +1,143 @@
+<div class="card mat-card" id="hab">
+    <div class="card-titles" id="habilidad">
+      <h2 class="card-header">Hard & Soft Skills</h2>
+      <div class="btn-edit" *ngIf="isLogged" >
+        <button type="button" class="btn btn-right" data-toggle="modal" data-target="#myModalHys" >
+          <i class="fa fa-plus"></i>
+        </button>      
+      </div>      
+    </div>
+  
+  
+    <ol class="items-list" *ngFor="let Hys of hys">
+      <li>
+        <div class="aptitude-info" id="text-html">        
+            <p><span>HTML</span></p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.html + '%' }" [attr.aria-valuenow]="Hys.html" aria-valuemin="0" aria-valuemax="100">
+              
+                <span style="color: rgb(214, 167, 66)">{{Hys.html}}</span>
+  
+              </div>
+            </div>
+          
+        </div>
+      </li>
+      <li>
+        <div class="aptitude-info" id="text-bootstrap">        
+          <p><span>Bootstrap</span></p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.bootstrap+ '%' }" [attr.aria-valuenow]="Hys.bootstrap" aria-valuemin="0" aria-valuemax="100">
+            
+              <span style="color: rgb(214, 167, 66)">{{Hys.bootstrap}}</span>
+  
+            </div>
+          </div>      
+      </div>
+      </li>
+      <li>
+        <div class="aptitude-info" id="text-angular">        
+          <p><span>Angular</span></p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.angular + '%' }" [attr.aria-valuenow]="Hys.angular" aria-valuemin="0" aria-valuemax="100">
+            
+              <span style="color: rgb(214, 167, 66)">{{Hys.angular}}</span>
+  
+            </div>
+          </div>      
+      </div>
+      </li>
+      <li>
+        <div class="aptitude-info" id="text-mysql">        
+          <p><span>MySQL</span></p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.mysql + '%' }" [attr.aria-valuenow]="Hys.mysql" aria-valuemin="0" aria-valuemax="100">
+            
+              <span style="color: rgb(214, 167, 66)">{{Hys.mysql}}</span>
+  
+            </div>
+          </div>      
+      </div>
+      </li>  
+      <li>
+        <div class="aptitude-info" id="text-java">        
+          <p><span>Java</span></p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.java + '%' }" [attr.aria-valuenow]="Hys.java" aria-valuemin="0" aria-valuemax="100">
+            
+              <span style="color: rgb(214, 167, 66)">{{Hys.java}}</span>
+  
+            </div>
+          </div>      
+      </div>
+      </li>  
+      <li>
+        <div class="aptitude-info" id="text-springboot">        
+          <p><span>Springboot</span></p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" [ngStyle]="{ 'width': Hys.springboot + '%' }" [attr.aria-valuenow]="Hys.springboot" aria-valuemin="0" aria-valuemax="100">
+            
+              <span style="color: rgb(214, 167, 66)">{{Hys.springboot}}</span>
+  
+            </div>
+          </div>      
+      </div>
+      </li>
+      <li>
+        <div class="btn-edit" *ngIf="isLogged">
+          <button type="button" id="btn-habilidad" class="btn btn-right" routerLink="/edithys/{{Hys.id}}">
+            <i class="bi bi-pencil-fill"></i></button>
+          <button type="button" class="btn btn-right" (click)="delete(Hys.id)">
+            <i class="bi bi-trash-fill"></i></button>
+        </div>
+      </li>
+    </ol>
+    
+  </div>
+  
+  <!--Modal NewHyS-->
+  <div class="modal fade" id="myModalHys" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalEduc">Agregar Hard & Soft Skills</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="form-group">
+                <label for="html">HTML: </label>
+                <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="html" name="html" [(ngModel)]="html" required>
+            </div>
+            <div class="form-group">
+                <label for="bootstrap">Bootstrap: </label>
+                <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="bootstrap" name="bootstrap" [(ngModel)]="bootstrap" required>
+            </div>
+            <div class="form-group">
+              <label for="angular">Angular: </label>
+              <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="angular" name="angular" [(ngModel)]="angular" required>
+            </div>
+            <div class="form-group">
+              <label for="mysql">MySQL: </label>
+              <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="mysql" name="mysql" [(ngModel)]="mysql" required>
+            </div>
+            <div class="form-group">
+              <label for="java">Java: </label>
+              <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="java" name="java" [(ngModel)]="java" required>
+            </div>
+            <div class="form-group">
+              <label for="springboot">Springboot: </label>
+              <input type="text" class="form-control" placeholder="Ingrese un numero del 1 al 100" id="springboot" name="springboot" [(ngModel)]="springboot" required>
+            </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.reload()">Cerrar</button>
+              <button type="submit" class="btn btn-light" onclick="location.reload()">Agregar Hard & Soft Skills</button>
+            </div>         
+          </form>
+        </div>      
+      </div>
+    </div>
+  </div>

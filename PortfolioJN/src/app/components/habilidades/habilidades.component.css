@@ -1,0 +1,24 @@
+
+div#btn-habilidad{
+    display: flex;
+    align-self: flex-end;
+
+}
+
+div#hab{
+    background-color: black;
+    padding: 10px;
+
+}
+div.btn-edit{
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    text-align: end;
+}
+
+#myModalHys{
+    color: rgb(212, 175, 55);
+}

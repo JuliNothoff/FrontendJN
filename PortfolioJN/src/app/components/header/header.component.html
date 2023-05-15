@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img class="img-thumbnail" src="https://yt3.googleusercontent.com/4HM_-p_YCTbyHFdDKLOd2DPr8QvHePQcq9v4404vHP4ojUD5H9h0Cj8MYY0EAgFWxKocR2bGgQc=s900-c-k-c0x00ffffff-no-rj" width="75" height="50" class="d-inline-block align-text-top rounded" alt="argentina programa"> 
+    </a>
+    <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active waves-effect waves-light tooltip-test" title="Visita mi facebook" aria-current="page" href="https://facebook.com">
+            <i class="grey-text fab bi bi-facebook fa-2x px-1"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active waves-effect waves-light tooltip-test" title="Visita mi GitHub" aria-current="page" href="https://github.com/JuliNothoff">
+            <i class="grey-text fab bi bi-github fa-2x px-1"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active waves-effect waves-dark tooltip-test" title="Enviame un mensaje" aria-current="page" href="https://wa.me/543416118324">
+            <i class="grey-text fab bi bi-whatsapp fa-2x px-1"></i>
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button type="button" class="btn btn-outline-secundary text-light my-2 my-sm-0 px-1 me-md-2" (click)="login()" *ngIf="!isLogged"><i class="grey-text bi bi-box-arrow-in-right fa-2x px-1"></i></button>
+        <button type="button" class="btn btn-outline-secundary text-light my-2 my-sm-0 px-1 me-md-2" (click)="onLogOut()" *ngIf="isLogged"><i class="grey-text bi bi-box-arrow-in-left fa-2x px-1"></i></button>
+      </form>
+    </div>
+    </div>
+  </nav>
